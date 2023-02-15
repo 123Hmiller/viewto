@@ -11,14 +11,20 @@
     <h1>Hello Vue</h1>
 
     <div id="app">
-          <p>{{title}}</p>
-          <p>{{author}}</p>
-          <p>{{age}}</p>
+        <div v-if="showBooks">
+            <p>{{title}}</p>
+            <p>{{author}}</p>
+            <p>{{age}}</p>
+  
 
-          <button v-on:click="age++">Increase age</button>
-          <button v-on:click="age--">Decrease age</button>
-          <div @click="title = 'something' ">new title</div>
-    </div>
+        </div>
+
+        <button @click="toggleShowBooks">
+            <span v-if="showbooks">Hide Books</span>
+            <span v-else>Show Books</span>
+        </button>
+        <div> v-show="showBooks">currently showBooks</div>
+ </div>
  
     <script src="app.js"></script>
 </body>
