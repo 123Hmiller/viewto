@@ -6,14 +6,14 @@
     <title>Learning Vue</title>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 <style>
-    .box{
-        padding: 100px 0;
-        width: 400px;
-        text-align: center;
-        background: #ddd;
-        margin: 20px;
-        display: inline-block;
-    }
+    /* .box{ */
+        /* padding: 100px 0; */
+        /* width: 400px; */
+        /* text-align: center; */
+        /* background: #ddd; */
+        /* margin: 20px; */
+        /* display: inline-block; */
+    /* } */
 </style>
 </head>
 <body>
@@ -24,8 +24,9 @@
 
         <div v-if="showBooks">
             <ul>
-             <li v-for="book in books">
-                <img src="" :alt="book.title">
+             <li v-for="book in books" :class="{ fav: book.isFav }">
+                <img :src="book.img" :alt="book.title">
+                
     <h3>{{ book.title }}</h3>
     <p> {{ book.author }}</p>
              </li>
